@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ExitLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject camera;
+    [SerializeField] private GameObject Player;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == camera)
+        if (other.gameObject == Player)
         {
             Debug.Log("Collided");
             SceneManager.LoadScene("Level 1");

@@ -43,7 +43,11 @@ public class PortalPlacement : MonoBehaviour
         if(hit.collider != null)
         {
             // If we shoot a portal, recursively fire through the portal.
-            if (hit.collider.tag == "Portal")
+            if (hit.collider.tag == "Ignore")
+            {
+
+            }
+            else if (hit.collider.tag == "Portal")
             {
                 var inPortal = hit.collider.GetComponent<Portal>();
 
